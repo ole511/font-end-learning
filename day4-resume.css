@@ -1,0 +1,60 @@
+html { 
+    font-family: Helvetica, Arial, sans-serif; font-size: 10px; 
+} 
+body{
+    background-image: url(/img/霍格沃兹.jpg);
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+    border-top: 1px solid rebeccapurple;
+    border-bottom: 3px solid rebeccapurple;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    
+    background-color: rgb(224, 204, 224);
+    
+}
+span{
+    font-size: 2.5em;
+    color: black ;
+    font-weight:bold;
+}
+span.subject{
+    text-emphasis:inherit;
+    text-shadow: 50px;
+    font-size: 25px;
+    padding-left: 20%;
+    line-height: 30px;
+}
+span.value{
+    color:  rgb(88, 36, 139);
+}
+
+h1{
+    color: rgb(72, 81, 90);
+    text-align: center;
+    font-size: 50px;
+}
+ul{
+    padding-left: 24%;
+    text-decoration: none;
+    margin: 0 0 0.5em 0;
+    list-style-type: square;
+}
+li{
+    color: rgb(88, 36, 139);
+}
+li, p{
+    line-height: 1.5em;
+}
+a{
+    text-decoration: none;
+    color: rebeccapurple;
+}
+a:hover{
+    background-color: mistyrose;
+}
