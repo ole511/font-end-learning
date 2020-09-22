@@ -1,0 +1,77 @@
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+  }
+body {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.wrapper{
+    display: flex;
+    flex-grow: 0;
+    flex-flow: column nowrap;
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+}
+.wrapper > * {
+    padding: 0px;
+}
+h1 {
+    background-color: grey;
+    color: white;
+    margin: 0;
+}
+
+.wrapper2{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0;
+    height: 18%;
+}
+
+.wrapper2 .info{
+    flex: 0 400px;
+    background-color: lightgrey;
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    font-weight: bold;
+    border-bottom: white 1px solid;
+    padding: 20px 30px;
+    display: flex;
+    
+    display: flex;
+    align-items: center; /*垂直居中*/
+    justify-content: center; /*水平居中*/
+}
+.wrapper2 .info2 {
+    flex: 0 400px;
+    background-color: bisque;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: white 1px solid;
+    line-height: 0;
+}
+
+.wrapper2 .value{
+    flex: 1 auto;
+    margin-left: 2%;
+    margin: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 25px;
+    border-bottom: 1px gray solid;
+    justify-content: center;
+    
+    
+}
+
+.emphasize{
+    font-weight: bold;
+    padding-left: 30px;
+}
