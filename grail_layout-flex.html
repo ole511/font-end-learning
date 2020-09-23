@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圣杯布局-flex</title>
+    <style>
+        header,footer{
+            background-color: lightblue;
+            line-height: 3em;
+            text-align: center;
+            margin: 0;
+        }
+        h3{
+            margin: 0;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+        }
+        .left{
+            background-color: lightgreen;
+            width:20%
+        }
+        .right{
+            background-color: lightgoldenrodyellow;
+            width:20%
+        }
+        .middle{
+            background-color: lightcoral;
+            flex: 1;
+            min-height: 300px;
+        }
+        .content{
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3>header</h3>
+    </header>
+
+    <div class="container">
+        <div class="left">
+            <div class="content">
+                left
+            </div>
+        </div>
+        <div class="middle">
+            <div class="content">
+                midddle
+            </div>
+        </div>
+        <div class="right">
+            <div class="content">
+                right
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h3>footer</h3>
+    </footer>
+</body>
+</html>
