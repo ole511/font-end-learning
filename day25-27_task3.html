@@ -306,56 +306,60 @@
   }
 
   function adjustDate(){
-    let year = optionValue(yearSelect)
-    let month = optionValue(monthSelect)
-    let day29 = daySelect.children[28]
-    let day30 = daySelect.children[29]
-    let day31 = daySelect.children[30]
-    switch(month){
+    let year = Number(optionValue(yearSelect))
+    let month = Number(optionValue(monthSelect))  // switch是严格等于,所以要转换成number
+    let day29 = daySelect[28]
+    let day30 = daySelect[29]
+    let day31= daySelect[30]
+
+    switch (month){
       case 1:
-      case 3:
-      case 5:
-      case 7:
+      case 3: 
+      case 5: 
+      case 7: 
       case 8:
       case 10:
-      case 12:
+      case 12: {
         showOption(day29)
         showOption(day30)
         showOption(day31)
         break
-      case 2:
-        if(isLeapYear(year)){
+      }
+      case 2: {
+        if (isLeapYear(year)){
           showOption(day29)
         }else{
-          hideOption(day29)
+          hiddenOption(day29)
         }
-      case 4:
-      case 6:
-      case 11:
-        hideOption(day31)
-        hideOption(day30)
+      }
+      case 4: 
+      case 6: 
+      case 9: 
+      case 11:{
+        hiddenOption(day30)
+        hiddenOption(day31)
         break
+      }
     }
   }
 
-  function showOption(option){
-    option.style.display = 'inline'
+  function showOption(day){
+    day.hidden = ''
+    //obj.style.display = 'inline'
   }
 
-  function hideOption(option){
-    option.style.display = 'none'
+  function hiddenOption(day){
+    day.hidden = 'hidden'
+    //obj.style.display = 'none'
   }
 
-  function isLeapYear(num){
-    num = Number(num)
-    if ((num/4==0 && num/100 != 0) || (num/400 == 0)){
+  function isLeapYear(year){
+    if ((year % 4 == 0 && year % 100 != 0)||(year % 400 == 0)){
       return true
-    }
-    else{
+    }else{
       return false
     }
   }
-
 
 </script>
 </body>
