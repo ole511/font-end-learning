@@ -301,7 +301,7 @@
     let hour = optionValue(hourSelect);
     let minute = optionValue(minuteSelect);
     let second = optionValue(secondSelect);
-    let selectedTime = new Date(year, month, day, hour, minute, second);
+    let selectedTime = new Date(year, month, day, hour, minute, second); //原来可以直接用New Date()创建新的日期,学到了!
     return selectedTime;
   }
 
