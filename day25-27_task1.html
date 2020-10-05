@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>showTime</title>
+</head>
+<body>
+  <p id='showTime'></p>
+  <h1></h1>
+  <script>
+    var showTheTime = document.querySelector('#showTime');
+    var today;
+    
+    function display(){
+      today = new Date();
+      showTheTime.innerHTML = showDate() + showDay() + showTime() ;
+    }
+
+    function check(i){
+      if (i<10){
+        i = '0' + i;
+      }
+      return i;
+    }
+
+    function showDate(){
+      var disDate;
+      disDate = today.getFullYear() + '年';
+      disDate += today.getMonth() + '月';
+      disDate += today.getDate() + '日 ';
+      return disDate;
+    }
+
+    function showDay(){
+      var week = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+      return week[today.getDay()];
+    }
+    function showTime(){
+      var h,m,s;
+      h = today.getHours();
+      h = check(h);
+      m = today.getMinutes();
+      m = check(m);
+      s = today.getSeconds();
+      s = check(s);
+      h = ' ' + h + ':' + m + ':' + s;
+      return h;
+    }
+  
+    
+    window.setInterval(display, 1000);
+
+
+  </script>
+</body>
+</html>
