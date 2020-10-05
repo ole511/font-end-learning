@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>showTime</title>
+</head>
+<body>
+  <p id='showTime'></p>
+  <h1></h1>
+  <script>
+    var showTheTime = document.querySelector('#showTime');
+    var today;
+    
+    function display(){
+      today = new Date();
+      showTheTime.innerHTML = showDate() + showDay() + showTime() ;
+    }
+
+    function check(i){
+      if (i<10){
+        i = '0' + i;
+      }
+      return i;
+    }
+
+    function showDate(){
+      var disDate;
+      disDate = today.getFullYear() + '-';
+      disDate += today.getMonth() + '-';
+      disDate += today.getDate() + ' ';
+      return disDate;
+    }
+
+    function showDay(){
+      var week = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      return week[today.getDay()];
+    }
+    function showTime(){
+      var h,m,s,half;
+      h = today.getHours();
+      if (h>12){
+        h -= 12;
+        half = 'PM'
+      }else{
+        half = 'AM'
+      }
+      h = check(h);
+      m = today.getMinutes();
+      m = check(m);
+      s = today.getSeconds();
+      s = check(s);
+      h = ' ' + h + ':' + m + ':' + s +' '+half;
+      return h;
+    }
+  
+    
+    window.setInterval(display, 1000);
+
+
+  </script>
+</body>
+</html>
